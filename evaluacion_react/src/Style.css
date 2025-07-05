@@ -133,6 +133,7 @@ button:hover {
   padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
+  color: #333;
 }
 
 .filtros button:hover {
@@ -193,12 +194,22 @@ button:hover {
   color: #888;
 }
 
+.container.oscuro .filtros button {
+  color: white;
+  background-color: #444;
+  border: 1px solid #777;
+}
+
+.container.oscuro .filtros button:hover {
+  background-color: #666;
+}
+
 .modo-btn {
   margin-bottom: 1rem;
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #333;
   border: none;
   border-radius: 5px;
 }
