@@ -60,13 +60,13 @@ function App() {
     localStorage.setItem('modoOscuro', modoOscuro);
   }, [modoOscuro]);
 
-  useEffect(() => {
+  /*useEffect(() => {
   if (modoOscuro) {
     document.body.classList.add("oscuro");
   } else {
     document.body.classList.remove("oscuro");
   }
-}, [modoOscuro]);
+}, [modoOscuro]); */
 
 
   return (
