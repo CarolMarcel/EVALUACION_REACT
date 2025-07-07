@@ -1,10 +1,10 @@
 body {
   
-  background-image: url('https://blog.ultracasas.com/wp-content/uploads/2021/10/5f0a0574adf578b75483ab77_Animation_OfficeCleaning-para-web.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-image: url('https://blog.ultracasas.com/wp-content/uploads/2021/10/5f0a0574adf578b75483ab77_Animation_OfficeCleaning-para-web.gif') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
   font-family: sans-serif;
   margin: 0;
   padding: 2rem;
