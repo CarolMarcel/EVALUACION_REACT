@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
-  background: linear-gradient(to bottom right, #e6eef5, #f6f9fc);
+  background-image: url('https://blog.ultracasas.com/wp-content/uploads/2021/10/5f0a0574adf578b75483ab77_Animation_OfficeCleaning-para-web.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   margin: 0;
   padding: 2rem;
   min-height: 100vh;
@@ -15,11 +19,13 @@ body.oscuro {
 
 .container {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 40px auto;
   background: white;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
