@@ -60,6 +60,14 @@ function App() {
     localStorage.setItem('modoOscuro', modoOscuro);
   }, [modoOscuro]);
 
+  useEffect(() => {
+  if (modoOscuro) {
+    document.body.classList.add("oscuro");
+  } else {
+    document.body.classList.remove("oscuro");
+  }
+}, [modoOscuro]);
+
 
   return (
     <div className={`container ${modoOscuro ? 'oscuro' : ''}`}>

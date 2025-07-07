@@ -1,8 +1,16 @@
 body {
   font-family: sans-serif;
-  background-color: #f0f4f8;
+  background: linear-gradient(to bottom right, #e6eef5, #f6f9fc);
   margin: 0;
   padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+body.oscuro {
+  background: linear-gradient(to bottom right, #111, #222);
 }
 
 .container {
