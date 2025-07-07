@@ -1,32 +1,6 @@
 // Paso 2: Componente Formulario.jsx
 // Ubicado en src/components/Formulario.jsx
-/* import { useState } from 'react';
 
-function Formulario({ onAgregar }) {
-  const [texto, setTexto] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (texto.trim() !== '') {
-      onAgregar(texto);
-      setTexto('');
-    }
-  };
-
-  return (
-    <form className="formulario" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={texto}
-        onChange={(e) => setTexto(e.target.value)}
-        placeholder="Nuevo hábito"
-      />
-      <button type="submit">Agregar</button>
-    </form>
-  );
-}
-
-export default Formulario;  */ 
 
 import { useState } from 'react';
 
