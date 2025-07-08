@@ -8,10 +8,7 @@ import './Style.css'; // Importamos solo un CSS global
 function App() {
   const [habitos, setHabitos] = useState(() => {
     const guardados = localStorage.getItem('habitos');
-    return guardados ? JSON.parse(guardados) : [
-      { id: 1, nombre: 'Beber agua', hecho: false },
-      { id: 2, nombre: 'Hacer ejercicio', hecho: false }
-    ];
+    return guardados ? JSON.parse(guardados) : [];
   });
 
   const toggleHabito = (id) => {
@@ -67,45 +64,6 @@ function App() {
     document.body.classList.remove("oscuro");
   }
 }, [modoOscuro]); */
-
-
-  /*return (
-    <div className={`container ${modoOscuro ? 'oscuro' : ''}`}>
-      <h1>Mis Hábitos Diarios</h1>
-
-      <button className="modo-btn" onClick={() => setModoOscuro(!modoOscuro)}>
-        {modoOscuro ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
-      </button>
-      
-      <Formulario onAgregar={agregarHabito} />
-      <div className="filtros">
-        <button onClick={() => setFiltro('todos')}>Todos</button>
-        <button onClick={() => setFiltro('completados')}>Completados</button>
-        <button onClick={() => setFiltro('pendientes')}>Pendientes</button>
-      </div>
-      <div className="orden">
-        <span>Ordenar por:</span>
-        <button onClick={() => ordenarPorFecha()}>Fecha</button>
-        <button onClick={() => ordenarPorNombre()}>Nombre</button>
-      </div>
-
-      <ListaHabitos
-        habitos={habitos.filter(h => {
-          if (filtro === 'completados') return h.hecho;
-          if (filtro === 'pendientes') return !h.hecho;
-          return true;
-        })}
-        onToggle={toggleHabito}
-        onEliminar={eliminarHabito}/>
-      <p className="contador">
-        ✅ Has completado {habitos.filter(h => h.hecho).length} de {habitos.length} hábitos
-      </p>
-      <div className="progreso">
-        <div className="progreso-barra" style={{ width: `${(habitos.filter(h => h.hecho).length / habitos.length) * 100}%` }}></div>
-      </div>
-
-    </div>
-  ); */
 
   return (
   <div className="fondo">
