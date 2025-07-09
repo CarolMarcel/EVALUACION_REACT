@@ -1,5 +1,5 @@
 // Paso 1: Comenzamos con App.jsx
-import { useState, useEffect } from 'react';
+/* import { useState, useEffect } from 'react';
 import Formulario from './components/Formulario';
 import ListaHabitos from './components/ListaHabitos';
 import './Style.css'; // Importamos solo un CSS global
@@ -63,9 +63,9 @@ function App() {
   } else {
     document.body.classList.remove("oscuro");
   }
-}, [modoOscuro]); */
+}, [modoOscuro]); */  
 
-  return (
+  /* return (
   <div className="fondo">
     <div className={`container ${modoOscuro ? 'oscuro' : ''}`}>
       <h1>Mis Hábitos Diarios</h1>
@@ -107,6 +107,98 @@ function App() {
       </div>
     </div>
   </div>
+  );
+}
+
+export default App; */
+
+import { useState, useEffect } from 'react';
+import Formulario from './components/Formulario';
+import CalendarioMensual from './components/CalendarioMensual';
+import './Style.css';
+
+function App() {
+  const obtenerFechaActual = () => new Date().toISOString().split('T')[0];
+
+  const [habitosPorDia, setHabitosPorDia] = useState(() => {
+    const guardados = localStorage.getItem('habitosPorDia');
+    return guardados ? JSON.parse(guardados) : {};
+  });
+
+  const [modoOscuro, setModoOscuro] = useState(() => {
+    const guardado = localStorage.getItem('modoOscuro');
+    return guardado === 'true';
+  });
+
+  const fechaActual = obtenerFechaActual();
+
+  const agregarHabito = (nombre) => {
+    const nuevo = {
+      id: Date.now(),
+      nombre,
+      hecho: false,
+    };
+
+    const copiaDia = habitosPorDia[fechaActual] ? [...habitosPorDia[fechaActual]] : [];
+    const actualizados = {
+      ...habitosPorDia,
+      [fechaActual]: [...copiaDia, nuevo],
+    };
+    setHabitosPorDia(actualizados);
+  };
+
+  const toggleHabito = (fecha, id) => {
+    const actualizados = {
+      ...habitosPorDia,
+      [fecha]: habitosPorDia[fecha].map(h =>
+        h.id === id ? { ...h, hecho: !h.hecho } : h
+      )
+    };
+    setHabitosPorDia(actualizados);
+  };
+
+  const eliminarHabito = (fecha, id) => {
+    const actualizados = {
+      ...habitosPorDia,
+      [fecha]: habitosPorDia[fecha].filter(h => h.id !== id)
+    };
+    setHabitosPorDia(actualizados);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('habitosPorDia', JSON.stringify(habitosPorDia));
+  }, [habitosPorDia]);
+
+  useEffect(() => {
+    localStorage.setItem('modoOscuro', modoOscuro);
+  }, [modoOscuro]);
+
+  useEffect(() => {
+    if (modoOscuro) {
+      document.body.classList.add("oscuro");
+    } else {
+      document.body.classList.remove("oscuro");
+    }
+  }, [modoOscuro]);
+
+  return (
+    <div className="fondo">
+      <div className={`container ${modoOscuro ? 'oscuro' : ''}`}>
+        <h1>Mis Hábitos Diarios</h1>
+
+        <button className="modo-btn" onClick={() => setModoOscuro(!modoOscuro)}>
+          {modoOscuro ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
+        </button>
+
+        <Formulario onAgregar={agregarHabito} />
+
+        <CalendarioMensual
+          habitosPorDia={habitosPorDia}
+          onToggle={toggleHabito}
+          onEliminar={eliminarHabito}
+        />
+      </div>
+    </div>
   );
 }
 
