@@ -19,6 +19,12 @@ Cuenta con **modo claro y oscuro**, animaciones suaves, filtros por estado, orde
 
 ---
 
+## 🚀 Vista previa
+
+![Captura de la App](./captura-app.png) 
+
+---
+
 ## 🛠️ Tecnologías utilizadas
 
 | Herramienta       | Versión       |
@@ -35,25 +41,49 @@ Cuenta con **modo claro y oscuro**, animaciones suaves, filtros por estado, orde
 
 ## ⚙️ Configuración adicional
 
-Algunos comandos no se ejecutaban por permisos. Para resolverlo, se utilizó:
+Para poder ejecutar correctamente algunos comandos en Windows (como `npm run deploy`), fue necesario conceder permisos administrativos al terminal de Visual Studio Code. También se verificó la instalación global de `gh-pages`. Para resolverlo, se utilizó:
 
 ```bash
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 Esto permitió correr correctamente scripts como npm run build y npm run deploy.
 
+---
+
+## 📦 Instalación y ejecución
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/EVALUACION_REACT.git
+   cd EVALUACION_REACT
+
+Instala las dependencias:
+
+    npm install
+
+Ejecuta en modo desarrollo:
+
+    npm run dev
+
+---
+
 🚀 Scripts disponibles
-bash
-Copiar
-Editar
+
 npm run dev         # Inicia el servidor de desarrollo
 npm run build       # Genera la versión de producción (carpeta dist)
 npm run preview     # Previsualiza la build local
 npm run deploy      # Publica en GitHub Pages
 📦 El proyecto está configurado para desplegarse en GitHub Pages desde la carpeta dist/.
 
+---
+
 ✨ Créditos
 Desarrollado por Carol marcel como parte de un desafío académico.
 Incluye funcionalidades mejoradas y diseño visual intuitivo.
 
-![Captura de la App](./captura-app.png)
+Carol Marcel - Evaluación de React - Año 2025
+
+¡Gracias por visitar este proyecto! ✨
+
+---
+
