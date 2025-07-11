@@ -233,7 +233,7 @@ button:hover {
   background-color: #555;
   color: white;
 }
-
+ 
 /* Animación de entrada */
 .habito-item.nuevo {
   animation: fadeIn 0.5s ease forwards;
