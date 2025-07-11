@@ -261,3 +261,13 @@ button:hover {
     transform: translateX(50px);
   }
 }
+
+.ayuda-input {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 5px 0 10px 2px;
+}
+
+.container.oscuro .ayuda-input {
+  color: #ccc;
+}
