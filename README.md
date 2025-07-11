@@ -15,7 +15,16 @@ Cuenta con **modo claro y oscuro**, animaciones suaves, filtros por estado, orde
 - 🔍 Filtros: Todos | Completados | Pendientes
 - 📅 Muestra la fecha del hábito
 - 📊 Barra de progreso visual
-- 🗓️ Visualización mensual tipo calendario con hábitos registrados por día
+- ✅ **Validaciones** al ingresar hábitos
+
+---
+
+## ✅ Validaciones implementadas
+
+- No permite agregar hábitos vacíos
+- No permite ingresar nombres duplicados
+- Requiere al menos 3 caracteres y como máximo 50
+- El texto debe contener al menos una letra (no solo símbolos o números)
 
 ---
 
@@ -43,7 +52,6 @@ Cuenta con **modo claro y oscuro**, animaciones suaves, filtros por estado, orde
 
 Para poder ejecutar correctamente algunos comandos en Windows (como `npm run deploy`), fue necesario conceder permisos administrativos al terminal de Visual Studio Code. También se verificó la instalación global de `gh-pages`. Para resolverlo, se utilizó:
 
-```bash
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 Esto permitió correr correctamente scripts como npm run build y npm run deploy.
@@ -53,7 +61,7 @@ Esto permitió correr correctamente scripts como npm run build y npm run deploy.
 ## 📦 Instalación y ejecución
 
 1. Clona el repositorio:
-   ```bash
+   
    git clone https://github.com/tu-usuario/EVALUACION_REACT.git
    cd EVALUACION_REACT
 

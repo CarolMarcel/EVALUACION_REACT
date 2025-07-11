@@ -25,13 +25,22 @@ function App() {
   });
 
   const agregarHabito = (nombre) => {
+    // Validar si el hábito ya existe (ignorando mayúsculas/minúsculas)
+    const yaExiste = habitos.some(h => h.nombre.toLowerCase() === nombre.toLowerCase());
+
+    if (yaExiste) {
+      alert('Ese hábito ya está en la lista.');
+      return;
+  }
+
     const nuevoHabito = {
       id: Date.now(),
       nombre,
       hecho: false,
-      creado: new Date().toLocaleDateString(), // ➕ fecha legible
-      animacion: 'nuevo' // ➕ animación de entrada
+      creado: new Date().toLocaleDateString(),
+      animacion: 'nuevo'
     };
+
     setHabitos([...habitos, nuevoHabito]);
   };
 
