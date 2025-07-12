@@ -1,6 +1,6 @@
 body {
   
-  background-image: url('https://i.pinimg.com/originals/dd/03/85/dd038562b4544e44991c4c8ee63b0ae0.gif') !important;
+  background-image: url('https://pixabay.com/es/videos/aurora-borealis-northern-lights-90877/') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -271,3 +271,58 @@ button:hover {
 .container.oscuro .ayuda-input {
   color: #ccc;
 }
+
+
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+    align-items: stretch;
+  }
+
+  .container {
+    padding: 1.2rem;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .formulario {
+    flex-direction: column;
+  }
+
+  .formulario input[type="text"],
+  .formulario button {
+    width: 100%;
+  }
+
+  .filtros,
+  .orden {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+  }
+
+  .modo-btn {
+    width: 100%;
+  }
+
+  .contador {
+    font-size: 0.9rem;
+  }
+
+  .progreso {
+    height: 14px;
+  }
+
+  .progreso-barra {
+    height: 100%;
+  }
+
+  .ayuda-input {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
