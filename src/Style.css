@@ -1,6 +1,6 @@
 body {
   
-  background-image: url('https://pixabay.com/es/photos/sendero-%C3%A1rbol-el-verano-rural-832031/') !important;
+  background-image: url('"C:\Users\Asus\Documents\FRONT\EVALUACION_REACT\fondo-app.jpg"') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
