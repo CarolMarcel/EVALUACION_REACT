@@ -1,6 +1,6 @@
 body {
   
-  background-image: url('"C:\Users\Asus\Documents\FRONT\EVALUACION_REACT\fondo-app.jpg"') !important;
+  background-image: url('fondo-app.jpg') !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
