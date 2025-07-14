@@ -24,7 +24,8 @@ Cuenta con **modo claro y oscuro**, animaciones suaves, filtros por estado, orde
 - No permite agregar hábitos vacíos
 - No permite ingresar nombres duplicados
 - Requiere al menos 3 caracteres y como máximo 50
-- El texto debe contener al menos una letra (no solo símbolos o números)
+- El texto debe contener al menos una letra (no solo números)
+- No se pueden ingresar caracteres especiales
 
 ---
 
