@@ -118,6 +118,7 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  max-width: 120px;
 }
 
 .btn-agregar:hover {
