@@ -61,11 +61,6 @@ Esto permitió correr correctamente scripts como npm run build y npm run deploy.
 
 ## 📦 Instalación y ejecución
 
-1. Clona el repositorio:
-   
-   git clone https://github.com/tu-usuario/EVALUACION_REACT.git
-   cd EVALUACION_REACT
-
 Instala las dependencias:
 
     npm install
@@ -87,7 +82,8 @@ npm run deploy      # Publica en GitHub Pages
 ---
 
 ✨ Créditos
-Desarrollado por Carol marcel como parte de un desafío académico.
+
+Desarrollado por Carol Marcel como parte de un desafío académico.
 Incluye funcionalidades mejoradas y diseño visual intuitivo.
 
 Carol Marcel - Evaluación de React - Año 2025
