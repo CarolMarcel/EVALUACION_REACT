@@ -75,9 +75,13 @@ Ejecuta en modo desarrollo:
 🚀 Scripts disponibles
 
 npm run dev         # Inicia el servidor de desarrollo
+
 npm run build       # Genera la versión de producción (carpeta dist)
+
 npm run preview     # Previsualiza la build local
+
 npm run deploy      # Publica en GitHub Pages
+
 📦 El proyecto está configurado para desplegarse en GitHub Pages desde la carpeta dist/.
 
 ---
