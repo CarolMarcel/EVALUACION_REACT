@@ -69,6 +69,7 @@ Ejecuta en modo desarrollo:
 
     npm run dev
 
+
 ---
 
 🚀 Scripts disponibles
