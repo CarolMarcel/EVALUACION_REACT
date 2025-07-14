@@ -14,7 +14,7 @@ function Habito({ habito, onToggle, onEliminar }) {
         <label>
           <input type="checkbox" checked={habito.hecho} onChange={() => onToggle(habito.id)}/>  {/* Al cambiar, se llama a onToggle con el id del hábito */}
           {habito.nombre}  {/* Nombre del hábito */}
-          <span className="fecha"> 🗓️ {habito.creado}</span>  {/* Fecha en que fue creado el hábito, con ícono de calendario */}
+          <span className="fecha"> 🗓️ {new Date(habito.creado).toLocaleDateString('es-CL')}</span>  {/* Fecha en que fue creado el hábito, con ícono de calendario */}
         </label>
       {/* Botón para eliminar el hábito */}
       <button className="eliminar-btn" onClick={() => onEliminar(habito.id)} title="Eliminar hábito">  {/* Llama a la función de eliminar pasando el id */}

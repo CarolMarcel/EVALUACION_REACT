@@ -44,7 +44,7 @@ function App() {
       id: Date.now(),  // ID único
       nombre,  // Nombre ingresado
       hecho: false,   // Por defecto no está hecho
-      creado: new Date().toLocaleDateString(),   // Fecha actual legible
+      creado: new Date().toISOString().split('T')[0],   // Fecha actual legible
       animacion: 'nuevo'  // Clase CSS para animación
     };
 
