@@ -34,18 +34,19 @@ h1 {
 }
 
 .formulario {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 10px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 input[type="text"] {
-  flex: 1 1 auto;
-  min-width: 0;
   padding: 0.5rem 0.75rem;
   border: 2px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -118,7 +119,7 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  max-width: 120px;
+  white-space: nowrap; /* evita que el texto se corte o haga saltos */
 }
 
 .btn-agregar:hover {
@@ -291,8 +292,8 @@ button:hover {
   }
 
   .formulario {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
   }
 
   .formulario input[type="text"],
