@@ -1,15 +1,16 @@
+/* Estilos generales para el cuerpo de la página */
 body {
   
-  background-image: url('/fondo-app.jpg') !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-attachment: fixed !important;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 2rem;
-  min-height: 100vh;
-  display: flex;
+  background-image: url('/fondo-app.jpg') !important;  /* Fondo de la app (imagen ubicada en /public) */
+  background-size: cover !important;  /* Escala la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat !important;  /* Evita que la imagen se repita */
+  background-position: center !important;  /* Centra la imagen */
+  background-attachment: fixed !important;  /* La imagen de fondo queda fija al hacer scroll */
+  font-family: sans-serif;   /* Fuente general del sitio */
+  margin: 0;  /* Quita el margen por defecto del navegador */
+  padding: 2rem;  /* Espacio interno general */
+  min-height: 100vh;  /* Altura mínima igual al alto de la pantalla */
+  display: flex;  /* Flexbox para centrar el contenido */
   justify-content: center;
   align-items: flex-start;
 }
@@ -18,38 +19,43 @@ body {
   background: linear-gradient(to bottom right, #111, #222);
 } */
 
+/* Contenedor principal de la aplicación */
 .container {
-  max-width: 500px;
-  margin: 40px auto;
+  max-width: 500px;  /* Ancho máximo */
+  margin: 40px auto;  /* Centrado con margen superior/inferior */
   background: white;
-  padding: 2rem;
+  padding: 2rem;  /* Relleno interno */
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
   position: relative;
   z-index: 1;
 }
 
+/* Título principal centrado */
 h1 {
   text-align: center;
 }
 
+/* Contenedor del formulario para agregar hábitos */
 .formulario {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
+  display: grid;  /* Grid para alinear el input y botón */
+  grid-template-columns: 1fr auto;  /* Input ocupa todo el espacio, botón se adapta */
+  gap: 10px;  /* Espacio entre columnas */
   margin-bottom: 20px;
-  align-items: center;
+  align-items: center;  /* Alinea elementos verticalmente */
 }
 
+/* Estilo del input de texto */
 input[type="text"] {
   padding: 0.5rem 0.75rem;
   border: 2px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* Incluye el padding en el cálculo del ancho */
 }
 
+/* Estilo general de botones */
 button {
   padding: 0.5rem 1rem;
   background-color: #0077cc;
@@ -59,42 +65,49 @@ button {
   cursor: pointer;
 }
 
+/* Cambio de color al pasar el mouse por encima */
 button:hover {
   background-color: #005fa3;
 }
 
+/* Lista de hábitos sin estilos predeterminados */
 .lista-habitos {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Estilo base de cada hábito */
 .habito {
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
 }
 
+/* Estilo cuando el hábito está marcado como completado */
 .habito.completado {
-  text-decoration: line-through;
+  text-decoration: line-through;  
   color: gray;
 }
 
+/* Contenedor de cada ítem de hábito */
 .habito-item {
-  display: flex;
+  display: flex;  /* Flexbox para alinear elementos */
   justify-content: space-between;
   align-items: center;
   padding: 6px 0;
   border-bottom: 1px solid #ddd;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;  /* Animación suave */
 }
 
+/* Estilo para el texto del hábito */
 .habito-item label {
   flex: 1;
   font-size: 16px;
 }
 
+/* Botón para eliminar hábito */
 .eliminar-btn {
   background-color: transparent;
   border: none;
@@ -111,6 +124,7 @@ button:hover {
   color: #ff0000;
 }
 
+/* Botón específico para agregar hábito */
 .btn-agregar {
   background-color: #2e6df6;
   color: white;
@@ -126,6 +140,7 @@ button:hover {
   background-color: #1b4ed8;
 }
 
+/* Contador de hábitos completados */
 .contador {
   text-align: center;
   margin-top: 20px;
@@ -133,12 +148,14 @@ button:hover {
   color: #333;
 }
 
+/* Fecha de creación del hábito */
 .fecha-habito {
   font-size: 12px;
   color: #888;
   margin-left: 25px;
 }
 
+/* Contenedor de botones de filtro */
 .filtros {
   display: flex;
   justify-content: center;
@@ -159,12 +176,14 @@ button:hover {
   background-color: #ddd;
 }
 
+/* Estilo para mostrar la fecha al lado del nombre */
 .fecha {
   margin-left: 10px;
   font-size: 0.8rem;
   color: #666;
 }
 
+/* Barra de progreso */
 .progreso {
   background-color: #e0e0e0;
   border-radius: 10px;
@@ -174,12 +193,14 @@ button:hover {
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
 }
 
+/* Parte interna de la barra que se va llenando */
 .progreso-barra {
   background-color: #28a745;
   height: 100%;
   transition: width 0.4s ease;
 }
 
+/* Sección para ordenar hábitos */
 .orden {
   display: flex;
   gap: 10px;
@@ -189,7 +210,7 @@ button:hover {
   font-size: 0.95rem;
 }
 
-/* 🌙 Modo oscuro */
+/* Modo oscuro */
 .container.oscuro {
   background-color: #1e1e1e;
   color: #ffffff;
@@ -223,6 +244,7 @@ button:hover {
   background-color: #666;
 }
 
+/* Botón para cambiar modo claro/oscuro */
 .modo-btn {
   margin-bottom: 1rem;
   padding: 0.3rem 0.8rem;
@@ -238,7 +260,7 @@ button:hover {
   color: white;
 }
  
-/* Animación de entrada */
+/* Animación de entrada al agregar hábito */
 .habito-item.nuevo {
   animation: fadeIn 0.5s ease forwards;
 }
@@ -254,18 +276,21 @@ button:hover {
   }
 }
 
-/* Animación al eliminar */
+/* Animación al eliminar un hábito */
 .habito-item.saliendo {
   animation: fadeOut 0.4s ease forwards;
 }
 
+/* Animación de salida (fadeOut) utilizada cuando se elimina un hábito.
+  Hace que el elemento se desvanezca y se desplace hacia la derecha (50px) antes de desaparecer */
 @keyframes fadeOut {
   to {
-    opacity: 0;
-    transform: translateX(50px);
+    opacity: 0;  /* Hace que el elemento se vuelva completamente transparente */
+    transform: translateX(50px);  /* Desplaza el elemento 50 píxeles hacia la derecha */
   }
 }
 
+/* Texto de ayuda debajo del input */
 .ayuda-input {
   font-size: 0.85rem;
   color: #555;
@@ -276,13 +301,16 @@ button:hover {
   color: #ccc;
 }
 
-
+/* Estilos responsivos para pantallas pequeñas (máximo 600px de ancho).
+  Estos estilos se aplican en dispositivos móviles para mejorar la usabilidad y adaptar el diseño */
 @media screen and (max-width: 600px) {
+  /* Reduce el padding del body y estira los elementos verticalmente */
   body {
     padding: 1rem;
     align-items: stretch;
   }
 
+  /* La tarjeta principal ocupa todo el ancho disponible, sin bordes redondeados ni sombra */
   .container {
     padding: 1rem;
     border-radius: 0;
@@ -291,17 +319,20 @@ button:hover {
     max-width: 100%;
   }
 
+  /* El formulario pasa de horizontal a vertical */
   .formulario {
     display: flex;
     flex-direction: column;
   }
 
+  /* Los elementos del formulario ocupan todo el ancho del contenedor */
   .formulario input[type="text"],
   .formulario button {
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box;   /* Asegura que padding y borde no sobrepasen el ancho */
   }
 
+   /* Botones de filtros y ordenamiento se apilan verticalmente */
   .filtros,
   .orden {
     flex-direction: column;
@@ -309,16 +340,19 @@ button:hover {
     align-items: stretch;
   }
 
+  /* Botones se estiran para ocupar el 100% del ancho disponible */
   .modo-btn, 
   .filtros button, 
   .orden button {
     width: 100%;
   }
 
+  /* Ajusta el tamaño del texto del contador */
   .contador {
     font-size: 0.9rem;
   }
 
+  /* Reduce la altura de la barra de progreso para pantallas pequeñas */
   .progreso {
     height: 14px;
   }
@@ -327,6 +361,7 @@ button:hover {
     height: 100%;
   }
 
+   /* Ajusta el tamaño del texto de ayuda y lo centra */
   .ayuda-input {
     font-size: 0.75rem;
     text-align: center;
