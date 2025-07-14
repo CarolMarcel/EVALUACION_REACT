@@ -45,6 +45,8 @@ input[type="text"] {
   border: 2px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button {
@@ -280,7 +282,7 @@ button:hover {
   }
 
   .container {
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 0;
     box-shadow: none;
     margin: 0;
@@ -289,11 +291,13 @@ button:hover {
 
   .formulario {
     flex-direction: column;
+    gap: 10px;
   }
 
   .formulario input[type="text"],
   .formulario button {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .filtros,
@@ -303,7 +307,9 @@ button:hover {
     align-items: stretch;
   }
 
-  .modo-btn {
+  .modo-btn, 
+  .filtros button, 
+  .orden button {
     width: 100%;
   }
 
